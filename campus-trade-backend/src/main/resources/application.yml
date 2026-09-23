@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+file:
+  upload-dir: D:\Homework\Web\codexword\codexword\campus-trade-backend\uploads
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/campus_trade?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 197821
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+jwt:
+  secret: campus-trade-secret-key-2024-this-is-a-very-long-secret-key-for-jwt
+  expiration: 86400000
+
+ai:
+  base-url: https://api.deepseek.com/v1
+  api-key: "sk-78acc09453c34856aea59abb3f39aa2a"
+  model: deepseek-chat
